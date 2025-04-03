@@ -57,9 +57,12 @@ python -m main_pys.run_mini_test --mapName=den312d
 ```
 At the end, you should see a plot like this in your `logs` folder.
 ![Alt text](example_den312d.png?raw=true "Effect of different collisions shields on den312d")
+<div align="center">
+      <img src="example_den312d.png?raw=true" alt="Effect of different collision shields on den312d" width="500">
+</div>
 
 ## Development
-I will monitor this repo and try my best to answer questions/issues, but I likely cannot make larger changes. If you are interested in improving this repo then I am happy to merge pull requests or add you as a collaborator to the repo.
+I will monitor this repo and try my best to answer questions/issues, but I likely cannot make large changes. If you are interested in improving this repo then I am happy to merge pull requests or add you as a collaborator to the repo.
 
 Lastly, in general I am happy to collaborate so feel free to reach out.
 

@@ -10,7 +10,7 @@ In particular, this repo contains:
 2. Simple Scalable Imitation Learning model "SSIL" (from second paper)
 3. Real-Time LaCAM (from third paper)
 
-Ths repo shows to use CS-PIBT, LaCAM, and Real-Time LaCAM with a learnt policy. This codebase does not provide a command-line way to switch out different models, but users only need to modify the `runNNOnState()` function to try out their own models.
+Ths repo shows to use CS-PIBT, LaCAM, and Real-Time LaCAM with a learnt policy. This codebase does not provide a command-line way to switch out different models, but users only need to modify the `runNNOnState()` function in `main_pys.simulator.py` to try out their own models.
 
 ## Installation
 To clone the repository, run:
@@ -44,7 +44,7 @@ python -m main_pys.simulator --mapNpzFile=data/constant_npzs/all_maps.npz \
       --maxSteps=1000 --seed=0 --useGPU=True \
       --agentNum=200 --shieldType=CS-Freeze
 ```
-Replace the last `--shieldType=CS-Freeze` with `--shieldType=CS-PIBT` or `--shieldType=Real-Time-LaCAM` to try out different collision shields.
+Replace the last `--shieldType=CS-Freeze` with `--shieldType=CS-PIBT` or `--shieldType=Real-Time-LaCAM` to try out different collision shields. You can also try doing K multi-step planning using regular LaCAM with `--shieldType=LaCAM --lacamLookahead=K` where `K` is a positive integer of your choice.
 
 To visualize outputs, use:
 ```sh
@@ -76,18 +76,18 @@ If you use this repository in your research, please cite our work:
   doi = {10.1609/icaps.v34i1.31522},
   number = {1},
   journal = {International Conference on Automated Planning and Scheduling (ICAPS)},
-  author = {Veerapaneni*, Rishi and Wang*, Qian and Ren*, Kevin and Jakobsson*, Arthur and Li, Jiaoyang and Likhachev, Maxim},
+  author = {Veerapaneni, Rishi and Wang, Qian and Ren, Kevin and Jakobsson, Arthur and Li, Jiaoyang and Likhachev, Maxim},
   year = {2024},
   pages = {597-606},
 }
 
-@article{veerapaneni2024worksmarterhardersimple,
-      title={Work Smarter Not Harder: Simple Imitation Learning with CS-PIBT Outperforms Large Scale Imitation Learning for MAPF}, 
-      author={Rishi Veerapaneni and Arthur Jakobsson and Kevin Ren and Samuel Kim and Jiaoyang Li and Maxim Likhachev},
-      year={2024},
-      eprint={2409.14491},
-      archivePrefix={arXiv},
-      primaryClass={cs.MA},
-      url={https://arxiv.org/abs/2409.14491}, 
+@article{veerapaneni2024work_smart_not_harder,
+  title = {Work Smarter Not Harder: Simple Imitation Learning with CS-PIBT Outperforms Large Scale Imitation Learning for MAPF},
+  author = {Veerapaneni, Rishi and Jakobsson, Arthur and Ren, Kevin and Kim, Samuel and Li, Jiaoyang and Likhachev, Maxim},
+  year = {2024},
+  journal = {arXiv preprint arxiv:2409.14491},
+  eprint = {2409.14491},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.MA},
 }
 ```

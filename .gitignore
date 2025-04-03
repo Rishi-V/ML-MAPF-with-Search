@@ -1,0 +1,6 @@
+__pycache__/
+
+# Project specific folders and files
+data/
+logs/
+test.ipynb

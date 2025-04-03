@@ -56,7 +56,6 @@ We also provide a sample script to compare `CS-Freeze`, `CS-PIBT`, and `Real-Tim
 python -m main_pys.run_mini_test --mapName=den312d
 ```
 At the end, you should see a plot like this in your `logs` folder.
-![Alt text](example_den312d.png?raw=true "Effect of different collisions shields on den312d")
 <div align="center">
       <img src="example_den312d.png?raw=true" alt="Effect of different collision shields on den312d" width="500">
 </div>

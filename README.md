@@ -3,14 +3,14 @@
 This repo contains the techniques of 3 papers that focus on improving learned one-step policies for MAPF using heuristic search.
 1. [Improving Learnt Local MAPF Policies with Heuristic Search (ICAPS 2024)](https://arxiv.org/abs/2403.20300)
 2. [Work Smarter Not Harder: Simple Imitation Learning with CS-PIBT Outperforms Large Scale Imitation Learning for MAPF (ICRA 2025)](https://arthurjakobsson.github.io/ssil_mapf/)
-3. Real-Time LaCAM (will be arXived soon)
+3. [Real-Time LaCAM (in submission)](https://arxiv.org/abs/2504.06091)
 
 In particular, this repo contains:
 1. CS-PIBT and LaCAM (from first paper)
 2. Simple Scalable Imitation Learning model "SSIL" (from second paper)
-3. Real-Time LaCAM (from third paper)
+3. One-step version of Real-Time LaCAM (from third paper)
 
-Ths repo shows to use CS-PIBT, LaCAM, and Real-Time LaCAM with a learnt policy. This codebase does not provide a command-line way to switch out different models, but users only need to modify the `runNNOnState()` function in `main_pys.simulator.py` to try out their own models.
+Ths repo shows to use CS-PIBT, LaCAM, and one-step version of Real-Time LaCAM with a learnt policy. This codebase does not provide a command-line way to switch out different models, but users only need to modify the `runNNOnState()` function in `main_pys.simulator.py` to try out their own models.
 
 ## Installation
 To clone the repository, run:
@@ -51,7 +51,7 @@ To visualize outputs, use:
 python -m main_pys.visualize_path den312d logs/paths.npy --scenName=den312d-random-1.scen 
 ```
 
-We also provide a sample script to compare `CS-Freeze`, `CS-PIBT`, and `Real-Time-LaCAM` on different number of agents on the same map. You can run, which will take a few hours to run:
+We also provide a sample script to compare `CS-Freeze`, `CS-PIBT`, and `Real-Time-LaCAM` on different number of agents on the same map. You can try it out by running the following command (note this will take a few hours to run):
 ```sh
 python -m main_pys.run_mini_test --mapName=den312d
 ```
@@ -87,6 +87,16 @@ If you use this repository in your research, please cite our work:
   year = {2024},
   journal = {arXiv preprint arxiv:2409.14491},
   eprint = {2409.14491},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.MA},
+}
+
+@article{liang2025real_time_lacam,
+  title = {Real-Time LaCAM},
+  author = {Liang, Runzhe and Veerapaneni, Rishi and Harabor, Daniel and Li, Jiaoyang and Likhachev, Maxim},
+  year = {2025},
+  journal = {arXiv preprint arxiv:2504.06091},
+  eprint = {2504.06091},
   archiveprefix = {arXiv},
   primaryclass = {cs.MA},
 }
